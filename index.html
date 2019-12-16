@@ -11308,7 +11308,6 @@ div.text_cell {
   box-align: stretch;
   /* Modern browsers */
   display: flex;
-  flex-direction: row;
   align-items: stretch;
 }
 @media (max-width: 540px) {
@@ -11340,9 +11339,6 @@ h4:hover .anchor-link,
 h5:hover .anchor-link,
 h6:hover .anchor-link {
   visibility: visible;
-}
-.text_cell.rendered .input_area {
-  display: none;
 }
 .text_cell.rendered .rendered_html {
   overflow-x: auto;
@@ -13195,7 +13191,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install category_encoders
@@ -13217,17 +13213,17 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Collecting category_encoders
   Downloading https://files.pythonhosted.org/packages/a0/52/c54191ad3782de633ea3d6ee3bb2837bda0cf3bc97644bb6375cf14150a0/category_encoders-2.1.0-py2.py3-none-any.whl (100kB)
-     |████████████████████████████████| 102kB 1.6MB/s ta 0:00:01
-Requirement already satisfied: pandas&gt;=0.21.1 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.25.0)
+     |████████████████████████████████| 102kB 1.5MB/s ta 0:00:01
+Requirement already satisfied: scikit-learn&gt;=0.20.0 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.21.3)
 Requirement already satisfied: patsy&gt;=0.4.1 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.5.1)
+Requirement already satisfied: numpy&gt;=1.11.3 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (1.17.0)
+Requirement already satisfied: pandas&gt;=0.21.1 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.25.0)
 Requirement already satisfied: statsmodels&gt;=0.6.1 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.10.1)
 Requirement already satisfied: scipy&gt;=0.19.0 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (1.3.1)
-Requirement already satisfied: scikit-learn&gt;=0.20.0 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (0.21.3)
-Requirement already satisfied: numpy&gt;=1.11.3 in /opt/conda/lib/python3.7/site-packages (from category_encoders) (1.17.0)
+Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/lib/python3.7/site-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (0.13.2)
+Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from patsy&gt;=0.4.1-&gt;category_encoders) (1.12.0)
 Requirement already satisfied: pytz&gt;=2017.2 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.21.1-&gt;category_encoders) (2019.2)
 Requirement already satisfied: python-dateutil&gt;=2.6.1 in /opt/conda/lib/python3.7/site-packages (from pandas&gt;=0.21.1-&gt;category_encoders) (2.8.0)
-Requirement already satisfied: six in /opt/conda/lib/python3.7/site-packages (from patsy&gt;=0.4.1-&gt;category_encoders) (1.12.0)
-Requirement already satisfied: joblib&gt;=0.11 in /opt/conda/lib/python3.7/site-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (0.13.2)
 Installing collected packages: category-encoders
 Successfully installed category-encoders-2.1.0
 </pre>
@@ -13240,7 +13236,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13277,7 +13273,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">so</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;stackoverflow.csv&quot;</span><span class="p">)</span>
@@ -13294,7 +13290,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13311,7 +13307,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">so</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13327,7 +13323,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -13455,7 +13451,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Given a row, this method will parse the QuestionDate and AnswerDate fields and return the substracted time</span>
@@ -13485,7 +13481,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13589,7 +13585,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mapTags</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
@@ -13615,7 +13611,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13732,7 +13728,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># helper function to format time difference (i.e. convert seconds to days, minutes, etc...)</span>
@@ -13749,7 +13745,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">popular</span> <span class="o">=</span> <span class="n">so</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;tag_list&#39;</span><span class="p">)</span> <span class="c1"># create a new row for every existing row with one tag in each</span>
@@ -13769,7 +13765,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[8]:</div>
 
 
 
@@ -13881,7 +13877,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">geo_mean</span><span class="p">(</span><span class="n">sr</span><span class="p">):</span>
@@ -13911,7 +13907,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[8]:</div>
+    <div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -14041,7 +14037,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;why&quot;</span><span class="p">,</span> <span class="s2">&quot;how&quot;</span><span class="p">,</span> <span class="s2">&quot;what&quot;</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="s2">&quot;where&quot;</span><span class="p">,</span> <span class="s2">&quot;when&quot;</span><span class="p">,</span> <span class="s2">&quot;which&quot;</span><span class="p">,</span> <span class="s2">&quot;can&quot;</span><span class="p">]</span>
@@ -14116,7 +14112,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># compute length of each title</span>
@@ -14138,13 +14134,13 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.collections.PathCollection at 0x7f9255ba65f8&gt;</pre>
+<pre>&lt;matplotlib.collections.PathCollection at 0x7f59404974e0&gt;</pre>
 </div>
 
 </div>
@@ -14186,7 +14182,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># compute length of each title</span>
@@ -14208,13 +14204,13 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.collections.PathCollection at 0x7f9255b88c18&gt;</pre>
+<pre>&lt;matplotlib.collections.PathCollection at 0x7f59403feba8&gt;</pre>
 </div>
 
 </div>
@@ -14264,7 +14260,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># extract hour to be used as bucket</span>
@@ -14286,7 +14282,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">so</span><span class="p">[</span><span class="s1">&#39;hour_bin&#39;</span><span class="p">],</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">so</span><span class="p">[</span><span class="s1">&#39;question_hour&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">24</span><span class="p">)),</span> <span class="n">include_lowest</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">retbins</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># seperate into bins</span>
@@ -14342,7 +14338,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># extract day to be used as bucket</span>
@@ -14364,7 +14360,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">day_df</span> <span class="o">=</span> <span class="n">so</span><span class="p">[[</span><span class="s1">&#39;time_diff&#39;</span><span class="p">,</span> <span class="s1">&#39;question_day&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;question_day&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;time_diff&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">geo_mean</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">]})</span>
@@ -14431,7 +14427,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">so</span><span class="o">.</span><span class="n">explode</span><span class="p">(</span><span class="s1">&#39;tag_list&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span> <span class="s1">&#39;Title&#39;</span><span class="p">,</span> <span class="s1">&#39;Body&#39;</span><span class="p">,</span> <span class="s1">&#39;Tags&#39;</span><span class="p">,</span> <span class="s1">&#39;QuestionDate&#39;</span><span class="p">,</span> <span class="s1">&#39;AnswerDate&#39;</span><span class="p">,</span> <span class="s1">&#39;hour_bin&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -14454,7 +14450,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">HashingEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;tag_list&#39;</span><span class="p">])</span>
@@ -14472,7 +14468,7 @@ Successfully installed category-encoders-2.1.0
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[40]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -14606,7 +14602,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -14627,7 +14623,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">reg</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -14648,7 +14644,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># KNN regression</span>
@@ -14672,7 +14668,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use linear regression to predict</span>
@@ -14686,7 +14682,7 @@ Successfully installed category-encoders-2.1.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># linear regression</span>
@@ -14712,8 +14708,8 @@ Successfully installed category-encoders-2.1.0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Squared Error: 11993389835.365868
-R^2 Value: 0.0008612906756569894
+<pre>Mean Squared Error: 12425960106.852112
+R^2 Value: 0.0011859187895162382
 </pre>
 </div>
 </div>
@@ -14732,10 +14728,10 @@ R^2 Value: 0.0008612906756569894
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use linear regression to predict</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># use KNN regression to predict</span>
 <span class="n">pred</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 </pre></div>
 
@@ -14746,10 +14742,10 @@ R^2 Value: 0.0008612906756569894
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># linear regression</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># KNN regression</span>
 
 <span class="c1"># MSE</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Squared Error: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)))</span>
@@ -14772,8 +14768,8 @@ R^2 Value: 0.0008612906756569894
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mean Squared Error: 4301088766.530334
-R^2 Value: 0.6416872679141546
+<pre>Mean Squared Error: 4010397933.081585
+R^2 Value: 0.6776392413644998
 </pre>
 </div>
 </div>
@@ -14785,6 +14781,8 @@ R^2 Value: 0.6416872679141546
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Our linear regression did not seem to perform very well on our testing data, producing a MSE of 1.2 * 10“11 and a very low R“2 value, indicating that the variance is not predicted very well by the features.</p>
+<p>In contrast, the KNN regression performed much better with a MSE of only a 4.3 <em> 10</em>10 and a much higher R’2 value of 0.64. Additional non-linear regressors could be tested to expand this performance.</p>
 
 </div>
 </div>
@@ -14797,6 +14795,16 @@ R^2 Value: 0.6416872679141546
     Conclusion
         </h1>
     </center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In summary, our analysis of the Stack Overflow's data was very informative. To review our procedure: We first began by extracting the relevant data by using SQL queries to match questions with their fastest answer. We then did a preliminary round of preprocessing to compute the time between the post of the question and the post of the first answer, terming this the 'response time’. Next, we underwent a series of procedures to explore and visualize various relationships in the data. Finally, we used the knowledge we gathered to create a regression model.</p>
+<p>Looking back, there are also several things that could be improved in our analysis. First, another dimension could be added to the problem: currently, we are only looking at questions that have received an answer. However, we could also look at questions that have not been answered, and use this to compute a metric about the probability that a question will be answered. Second, much more work can be done in terms of feature engineering. Currently, our model only incorporates metadata factors (such as length) of the title and body of the question. This procedure loses a lot of information actually present in the question. Natural Language Processing (NLP) methods could further be used to analyze how difficult a question is too answer. However, this also has its own problems because the complexity of a question is subjective (i.e. a question may be easier to answer by an expert and thus result in faster response times and vice versa).</p>
+<p>Despite these drawbacks, this tutorial did reveal that certain factors do seem to correlate with (and perhaps influence) the response time a question receives, especially in looking at features based on intuition. This tutorial allowed me personally to practice what I learned about the data science pipeline and explore a number of algorithms in a real-life scenario.</p>
+
 </div>
 </div>
 </div>
